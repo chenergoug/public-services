@@ -7,5 +7,13 @@ module.exports = {
   authExpired: {
     code: 10001,
     message: 'token过期'
+  },
+  userRegister: {
+    code: 10002,
+    message: '注册失败'
+  },
+  userAlready: {
+    code: 10003,
+    message: '用户名已经存在'
   }
 }
