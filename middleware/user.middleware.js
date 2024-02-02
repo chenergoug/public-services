@@ -4,9 +4,10 @@ const { userRegister } = require('../constant/unusual.constant')
 // 登录
 const login = async (ctx, next) => {
   const { user_name, password } = ctx.request.body
-  console.log('======>', user_name, password)
+
   try {
     const res = await getUserInfo({ user_name })
+    console.log('res', res)
     if (res) {
       return ctx.app.emit('error', userAlready, ctx)
     }
